@@ -7,13 +7,13 @@ TARGET_DIR="$(dirname "$(realpath "$0")")"
 cat > "$TARGET_DIR/docker-compose.yml" <<EOF
 version: '3'
 services:
-  webapp:
+  front:
     image: nginx:latest
     ports:
       - "80:80"
     volumes:
       - ./front:/usr/share/nginx/html
-  api:
+  back:
     image: python:3.9
     ports:
       - "8000:8000"

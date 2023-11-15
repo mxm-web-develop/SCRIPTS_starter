@@ -6,27 +6,27 @@
 TARGET_DIR="$(dirname "$(realpath "$0")")"
 
 mkdir -p "$TARGET_DIR/back"
-echo "请选择后端技术栈:"
-echo "1) Node.js (Express + TypeScript)"
-echo "2) Python (FastAPI)"
-read -p "输入选择 (1/2): " choice
+# echo "请选择后端技术栈:"
+# echo "1) Node.js (Express + TypeScript)"
+# echo "2) Python (FastAPI)"
+# read -p "输入选择 (1/2): " choice
 
-case $choice in
-    1)
-        echo "设置 Node.js 后端..."
-        # 初始化 Node.js 项目...
-        # 请在此处添加使用 express-generator 或其他工具初始化 Node.js 项目的命令
+# case $choice in
+#     1)
+    #     echo "设置 Node.js 后端..."
+    #     # 初始化 Node.js 项目...
+    #     # 请在此处添加使用 express-generator 或其他工具初始化 Node.js 项目的命令
       
-        # 进入生成的项目目录
-        pushd "$TARGET_DIR/back"  # 修改这里
-        npx express-generator-typescript .
+    #     # 进入生成的项目目录
+    #     pushd "$TARGET_DIR/back"  # 修改这里
+    #     npx express-generator-typescript .
 
-        # 安装项目依赖
-        yarn install
+    #     # 安装项目依赖
+    #     yarn install
 
-        popd
-        ;;
-    2)
+    #     popd
+    #     ;;
+    # 2)
         echo "设置 Python 后端..."
         # 确保pip已安装
         if command -v pip3 &> /dev/null; then
@@ -61,7 +61,7 @@ EOF
   
     popd
         ;;
-    *)
+    # *)
         echo "no choice available"
         exit 1
         ;;
