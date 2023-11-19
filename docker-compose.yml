@@ -1,18 +1,21 @@
 version: '3'
 services:
   front:
-    image: nginx:latest
+    build:
+      context: .  # 指定构建上下文为当前目录 (MYPROJECT)
+      dockerfile: front/Dockerfile  # Dockerfile 位于 frontend 子目录中
     ports:
       - "80:80"
-    volumes:
-      - ./front:/usr/share/nginx/html
+    # volumes:
+    #   - ./front:/usr/share/nginx/html
   back:
-    image: python:3.9
+    build: ./back
     ports:
-      - "8000:8000"
+      - "8080:8000"
     volumes:
-      - ./back:/usr/src/app
-    working_dir: /usr/src/app
-    command: /usr/src/app/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+      - ./back/app:/usr/src/app/app
     environment:
       - PYTHONUNBUFFERED=1
+      - HOST=0.0.0.0
+      - PORT=8000
+
