@@ -9,14 +9,14 @@ ROOT_DIR="$(dirname "$SETUP_DIR")"
 # 赋予所有脚本执行权限
 chmod +x "$SETUP_DIR/f-setup.sh" "$SETUP_DIR/b-setup.sh" "$SETUP_DIR/d-setup.sh" "$SETUP_DIR/s-setup.sh"
 
-# #调用前端设置脚本
-# bash "$SETUP_DIR/f-setup.sh" "$ROOT_DIR"
+#调用前端设置脚本
+bash "$SETUP_DIR/f-setup.sh" "$ROOT_DIR"
 
 # 调用后端设置脚本
 bash "$SETUP_DIR/b-setup.sh" "$ROOT_DIR"
 
-# # 调用Docker设置脚本
-# bash "$SETUP_DIR/d-setup.sh" "$ROOT_DIR"
+# 调用Docker设置脚本
+bash "$SETUP_DIR/d-setup.sh" "$ROOT_DIR"
 
 # # 调用Scripts脚本
 # bash "$SETUP_DIR/s-setup.sh" "$ROOT_DIR"
