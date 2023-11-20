@@ -63,11 +63,10 @@ EXPOSE 8000
 CMD ["python", "main.py"]
 EOF
 
-# 创建 run.sh 启动脚本
-cat > run.sh <<EOF
-#!/bin/bash
-source venv/bin/activate
-python main.py
+# 创建 README.md 启动脚本
+cat > README.md <<EOF
+python main.py 启动
+pip install -r requirements.txt 按照依赖
 EOF
 
 cd -  # 返回之前的目录
