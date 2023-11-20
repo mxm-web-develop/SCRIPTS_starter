@@ -32,7 +32,7 @@ services:
   mongodb:
     image: mongo
     volumes:
-      - mongo-data:/data/db
+      - ./mongo-data:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=12345
@@ -56,7 +56,7 @@ services:
   postgresql:
     image: postgres
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - ./postgres-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=mydb
       - POSTGRES_USER=root
