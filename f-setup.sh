@@ -16,9 +16,7 @@ else
 fi
 
   # 从 GitHub 拉取文件并添加到 front/README.md
-if ! curl -f --connect-timeout 10 --retry 1 -o "$TARGET_DIR/front/README.md" "https://raw.githubusercontent.com/mxm-web-develop/DOCS_mydocs/main/mxm-js-libs.md"; then
-    echo "MXM RECOMMEND LIB LIST: https://github.com/mxm-web-develop/DOCS_mydocs/blob/main/mxm-js-libs.md" > "$TARGET_DIR/front/README.md"
-fi
+  echo "MXM RECOMMEND LIB LIST: https://github.com/mxm-web-develop/DOCS_mydocs/blob/main/mxm-js-libs.md" > "$TARGET_DIR/front/README.md"
   echo "README 已更新。"
 
 # 创建 nginx.conf 文件
