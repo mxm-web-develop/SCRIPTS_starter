@@ -18,18 +18,19 @@ bash "$SETUP_DIR/b-setup.sh" "$ROOT_DIR"
 # 调用Docker设置脚本
 bash "$SETUP_DIR/d-setup.sh" "$ROOT_DIR"
 
-# # 调用Scripts脚本
-# bash "$SETUP_DIR/s-setup.sh" "$ROOT_DIR"
 
-# # 调用文档脚本
-# bash "$SETUP_DIR/doc-setup.sh" "$ROOT_DIR"
+# # 调用Scripts脚本
+bash "$SETUP_DIR/s-setup.sh" "$ROOT_DIR"
+
+# 调用文档脚本
+bash "$SETUP_DIR/doc-setup.sh" "$ROOT_DIR"
 
 
 # 删除已执行的脚本文件
-# rm -f "$SETUP_DIR/f-setup.sh"
-# rm -f "$SETUP_DIR/b-setup.sh"
-# rm -f "$SETUP_DIR/d-setup.sh"
-# rm -f "$SETUP_DIR/s-setup.sh"
-# rm -f "$SETUP_DIR/doc-setup.sh"
+rm -f "$SETUP_DIR/f-setup.sh"
+rm -f "$SETUP_DIR/b-setup.sh"
+rm -f "$SETUP_DIR/d-setup.sh"
+rm -f "$SETUP_DIR/s-setup.sh"
+rm -f "$SETUP_DIR/doc-setup.sh"
 
 echo "所有设置已完成。"
